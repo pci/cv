@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Philip Ingrey - Curriculum Vitae</title>
+	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding:0;
+			height:100%;
+			width:100%;
+			font-family:Helvetica,Arial,sans-serif;
+			font-size: 14px;
+		}
+
+		/* apply a natural box layout model to all elements - bit.ly/borderboxftw */
+		* { 
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		article{ position:relative;}
+
+		header{
+			color:white;
+			background-color:#222;
+			background-image: -moz-linear-gradient(top, #666, #333);
+			background-image: -webkit-linear-gradient(top, #666, #333);
+			background-image: -o-linear-gradient(top, #666, #333);
+			background-image: -linear-gradient(top, #666, #333);
+		}
+
+		h1 {
+			display: block;
+			text-shadow:3px 3px 5px black;
+			text-align:center;
+			font-family: 'Kaushan Script', cursive;
+			font-size: 2em;
+			font-weight: 400;
+			margin:0;
+			padding:21px;
+		}
+
+		.prefixed:before{
+			content: attr(data-prefix);
+			font-size:0.6em;
+		}
+
+		.suffixed:after{
+			content: attr(data-suffix);
+			font-size:0.6em;
+		}
+
+		a {
+			text-decoration:none;
+		}
+		
+		@media screen and (min-width: 700px) {
+			h3 {
+				margin-bottom:0;
+			}
+
+			.multi-col{
+				max-width:1000px;
+				margin:10px auto 0;
+				-moz-column-width:400px;
+				-webkit-column-width:400px;
+				column-width:400px;
+			}
+
+			.multi-col > section{
+				background-color: white;
+				border: 1px solid black;
+				border-radius:35px 0px;
+				box-shadow:3px 3px 5px black;
+				padding:15px;
+				margin:0 0 10px;
+				-moz-column-break-inside:avoid;
+				-webkit-column-break-inside:avoid;
+				column-break-inside:avoid;
+				-moz-break-inside:avoid;
+				-webkit-break-inside:avoid;
+				break-inside:avoid;
+			}
+
+			.multi-col h2{
+				text-align:center;
+				font-family: 'Kaushan Script', cursive;
+				font-weight: 400;
+				margin:-15px -15px 5px;
+			}
+
+			.skills h3{
+				margin-top:20px;
+				margin-bottom:2px;
+			}
+
+			/* colourings from Twitter Bootstrap - got to love open source :) */
+
+			.skill {
+				display: inline-block;
+				padding: 4px 10px 4px;
+				margin-right:10px;
+				float:left;
+				font-size: 13px;
+				line-height: 18px;
+				color: #333333;
+				text-align: center;
+				text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+				background-color: #fafafa;
+				background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+				background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+				background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+				background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+				background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+				background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+				background-repeat: no-repeat;
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+				border: 1px solid #ccc;
+				border-bottom-color: #bbb;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				cursor: pointer;
+			}
+			.skill:hover {
+			  text-decoration: none;
+			  background-color: #e6e6e6;
+			  background-position: 0 -15px;
+			  -webkit-transition: background-position 0.1s linear;
+			  -moz-transition: background-position 0.1s linear;
+			  -ms-transition: background-position 0.1s linear;
+			  -o-transition: background-position 0.1s linear;
+			  transition: background-position 0.1s linear;
+			}
+
+			.s1, .s2, .s3 {
+			  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			  color: #ffffff;
+			}
+
+			.s2 {
+			  background-color: #faa732;
+			  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+			  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+			  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+			  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+			  background-image: linear-gradient(top, #fbb450, #f89406);
+			  background-repeat: repeat-x;
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+			  border-color: #f89406 #f89406 #ad6704;
+			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+			}
+			.s2:hover {
+			  background-color: #f89406;
+			}
+
+			.s3 {
+			  background-color: #da4f49;
+			  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+			  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
+			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+			  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+			  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+			  background-image: linear-gradient(top, #ee5f5b, #bd362f);
+			  background-repeat: repeat-x;
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
+			  border-color: #bd362f #bd362f #802420;
+			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+			}
+			.s3:hover {
+			  background-color: #bd362f;
+			}
+			
+			.s1 {
+			  background-color: #5bb75b;
+			  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+			  background-image: -ms-linear-gradient(top, #62c462, #51a351);
+			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+			  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+			  background-image: -o-linear-gradient(top, #62c462, #51a351);
+			  background-image: linear-gradient(top, #62c462, #51a351);
+			  background-repeat: repeat-x;
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+			  border-color: #51a351 #51a351 #387038;
+			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+			}
+			.s1:hover {
+			  background-color: #51a351;
+			}
+
+			.skills:after{
+				content:'.';
+				visibility: hidden;
+				height:0;
+				clear:both;
+			}
+
+			article > aside{
+				-moz-transition: all .2s ease-in-out; 
+				-webkit-transition: all .2s ease-in-out; 
+				-o-transition: all .2s ease-in-out; 
+				-ms-transition: all .2s ease-in-out; 
+				transition: all .2s ease-in-out; 
+				-moz-transform: scale(0);
+				-webkit-transform: scale(0);
+				-o-transform: scale(0);
+				-ms-transform: scale(0);
+				transform: scale(0);
+				position:absolute;
+				background: white;
+				color:black;
+				border:1px solid black;
+				border-radius: 5px;
+				padding:5px;
+				width: 400px;
+				bottom:120%;
+				left:0;
+			}
+
+			article > aside:before,aside:after {
+				content: ".";
+				position: absolute;
+				color:transparent;
+				top:100%;
+				width: 0;
+				height: 0;
+				left:4px;
+				border-left: 11px solid transparent;
+				border-right: 11px solid transparent;
+				border-top: 11px solid black;
+			}
+
+			article > aside:after {
+				left:5px;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 10px solid white;
+			}
+
+			article:hover > aside{
+				-moz-transform: scale(1.0);
+				-webkit-transform: scale(1.0);
+				-o-transform: scale(1.0);
+				-ms-transform: scale(1.0);
+				transform: scale(1.0);
+			}
+
+			.nobtp{
+				list-style: none;
+			}
+
+			.polariod{
+				position:absolute;
+				right:20px;
+				top:0px;
+				box-shadow:3px 3px 5px black;
+				-moz-transform: rotate(5deg);
+				-webkit-transform: rotate(5deg);
+				-ms-transform: rotate(5deg);
+				-o-transform: rotate(5deg);
+				transform: rotate(5deg);
+				display:block;
+				background:white;
+				padding:10px 5px 20px;
+			}
+
+			.polariod:after {
+				content: ".";
+				color:transparent;
+			    width: 7px;
+			    height: 20px;
+			    position: absolute;
+			    top: 0;
+			    left:7px;
+			    border: 1px solid black;
+			    border-bottom-left-radius: 10px;
+			    border-bottom-right-radius: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1 class="prefixed suffixed" data-prefix="Dr" data-suffix="BEng PhD"> Philip Charles Ingrey </h1>
+	<div class="polariod"><img src="http://placekitten.com/100/100"></div>
+</header>
+<div class="multi-col">
+	<section>
+		<h2>Qualifications</h2>
+		<div class="bd">
+			<ul>
+			 	<li>
+			 		<p>
+			 			First-class BEng in Mathematics and Electronic Engineering from the University of Nottingham in 2007 (final-year average <a href='http://www.biggleswadetoday.co.uk/news/local-news/student_from_biggleswade_wins_hat_trick_of_awards_1_1121483'>95.3%</a>)
+			 		</p>
+			 	</li>
+				<li>
+			 		<p>
+			 			PhD in Applied Mathematics from the University of Nottingham - graduating in April 2010, one year early - <a href='http://etheses.nottingham.ac.uk/1392/'>'Optical Limits in Left-Handed Media'</a>
+			 		</p>
+				</li>
+				<li>
+			 		<p>
+						Recipient of a research fellowships from the Royal Commission for the Exhibition of 1851 - <a href='http://www.royalcommission1851.org.uk/recent2010.html'>'Automated key generation in texture coding'</a> - <a href="files/Outline.pdf">Lay Statement</a> [pdf]
+			 		</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section>
+		<h2 class="suffixed" data-suffix="  (hover for details)">Skills</h2>
+		
+		<section class="skills">
+			<h3>Mathematics</h3>
+			<article class="skill s3">
+				Mathematica
+				<aside>Experience: 5+ years. Mathematica is my current day-to-day programming enviroment. I have wide ranging experience with Mathematica, including image processing, prototyping code, multi-core deployment and data-mining</aside>
+			</article>
+			<article class="skill s2">
+				Matlab
+				<aside>Experience: 2 years. Experience with Matlab centered around multi-dimensional-scaling, the problem of determining a collection of object's positions when given their inter-distances</aside>
+			</article>
+			<article class="skill s2">
+				Maple
+				<aside>Experience: 3 years. Wide knowledge of Maple</aside>
+			</article>
+		</section>
+		
+		<section class="skills">
+			<h3>Programming</h3>
+			<article class="skill s3">
+				C/C++
+				<aside> C and C++ have been my main high-performance languages for the last 5 years, I've experience using the GNU debugger, optimising code, and using numerical libraries such as the GNU software library
+					<footer>Experience: 5+ years</footer>
+				</aside>
+			</article>
+			<article class="skill s2">
+				Python
+				<aside>Experience: 3 years.
+					<footer>Experience: 3 years</footer></aside>
+			</article>
+			<article class="skill s1">
+				SQL
+				<aside>
+					Knowledge of SQL language, database design, UML, recursion, and the basics of NoSQL and where it might be appropriate.
+					<footer>Experience: 1 years.</footer>
+				</aside>
+			</article>
+			<article class="skill s2">
+				...
+				<aside>Other languages I've had experience with: Java, Perl, C#, Fortran, BASIC, VB and I'm currently learning lisp.</aside>
+			</article>
+		</section>
+		
+		<section class="skills">
+			<h3>High Performance Computing</h3>
+			<article class="skill s1">
+				MPI
+				<aside>
+
+				</aside>
+			</article>
+			<article class="skill s2">
+				CUDA
+				<aside>
+					I have created and deployed large scale genetic algorithm computations on GPUs through the CUDA enviroment. This involved consideration of architecture and utilising different memory types to acheive a 308x speed-up over a compairable CPU solution.
+					<footer>Experience: 2 years</footer>
+				</aside>
+			</article>
+			<article class="skill s3">
+				Monte-Carlo Simulations
+				<aside>
+					A Monte-Carlo simulations to calculate the statistics of light in a media due to roughness at its surface was investigated using the university of Nottingham's high performance computing (hpc) clusters. As well as running the several million individual processes, the results had to be colated, transfered from the hpc, and analysed.
+					<footer>Experience: 3 years</footer>
+				</aside>
+			</article>
+		</section>
+		
+		<section class="skills">
+			<h3>Web-based</h3>
+			<article class="skill s3">
+				HTML
+				<aside>
+					I know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
+					<footer>Experience: 4 years</footer>
+				</aside>
+			</article>
+			<article class="skill s2">
+				CSS
+				<aside>
+					Whilst not greatly gifted as a designer, I enjoy using the additional flexiblity that CCS3 affords to make interesting, resonsive sites that can gracefully degrade for less capable browsers. 
+					<footer>Experience: 4 years</footer>
+				</aside>
+			</article>
+			<article class="skill s3">
+				Javascript
+				<aside>
+					I have built several javascript orientated . CoffeeScript!
+				</aside>
+			</article>
+			<article class="skill s2">
+				XML
+			</article>
+			<article class="skill s3">
+				PHP
+			</article>
+			<article class="skill s2">
+				Node.js
+			</article>
+		</section>
+		
+		<section class="skills">
+			<h3>OSs</h3>
+			<article class="skill s2">
+				Linux
+				<aside>
+					Both my work and home computers run linux as their primary OS (CentOS and ubuntu respectively). I've setup several LAMP and node.js servers and am competent at both the terminal and shell scripting.
+					<footer>Experience: 7 years</footer>
+				</aside>
+			</article>
+			<article class="skill s3">
+				Mac OS
+				<aside>
+
+					<footer>Experience: 4 years</footer>
+				</aside>
+			</article>
+			<article class="skill s3">
+				Windows
+				<aside>
+					I've been using windows since windows 3.1
+					<footer>Experience: 10+ years</footer>
+				</aside>
+			</article>
+		</section>
+	</section>
+
+	<section>
+		<h2>
+			Papers
+		</h2>
+		<h3>
+			2010
+		</h3>
+		<p>
+			<a href=http://www.opticsinfobase.org/ol/abstract.cfm?uri=ol-34-7-1015>Enhanced twinkling in left-handed media</a>, Optics Letters, Vol. 35, Issue 22, pp. 3802-3804<br>
+		</p>
+		<h3>
+			2009
+		</h3>
+		<p>
+			<a href=http://www.opticsinfobase.org/ol/abstract.cfm?uri=ol-34-7-1015>Perfect lens with not so perfect boundaries</a>, Optics Letters, vol. 34, Issue 7, pp. 1015-1017<br>
+		</p>
+		<p>
+			<a href="http://www.opticsinfobase.org/abstract.cfm?URI=ol-35-22-3802">Negative refraction and rough surfaces: A new regime for lensing</a>, Optics Communications, Volume 283, Issue 6, 15 March 2010, pp. 1188-1191 
+		</p>
+		<h3>
+			2008<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14></a>
+		</h3>
+		<p>
+			<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14>Direct Computation of Statistical Variations in Electromagnetic Problems</a>, Transactions on Electromagnetic Compatibility, vol. 50, Issue 2, pp. 325-332 (which came <font size=2>second in the IEEE EMC Best Paper Awards</font>)
+		</p>
+		<p>
+			<a href=http://www.sciencedirect.com/science?_ob=ArticleURL&amp;_udi=B6TVF-4V35679-2&amp;_user=5939061&amp;_rdoc=1&amp;_fmt=&amp;_orig=search&amp;_sort=d&amp;view=c&amp;_acct=C000009959&amp;_version=1&amp;_urlVersion=0&amp;_userid=5939061&amp;md5=2651817656d5c4069bfa0e6ae41d8902>Between right- and left-hand media</a>, Optics Communications, vol. 282, Issue 5, pp. 1020-1027
+		</p>
+		<h3>
+			2007
+		</h3>
+		<p>
+			<a href=http://link.aps.org/abstract/PRE/v76/e031134>Power-law-distributed level crossings define fractal behavior</a>, Physical Review E, vol. 76, Issue 3, id. 031134&nbsp;
+		</p>
+	</section>
+
+	<section>
+		<h2>
+			Prizes
+		</h2>
+		<h3>
+			2005
+		</h3>
+		<ul>
+			<li>
+				<p>
+					Letter of commendation from the head of school for outstanding achievement during the first year of study
+				</p>
+			</li>
+		</ul>
+		<h3>
+			2006
+		</h3>
+		<ul>
+			<li>
+				<p>
+		    		Price Waterhouse Coopers Mathematics Prize 1: Best overall performance in the second year by a joint honours undergraduate student.
+		    	</p>
+			</li>
+		</ul>
+		<h3>
+			2007
+		</h3>
+		<ul>
+			<li>
+				<p>
+					Institution of Electrical Engineers Prize: For the most outstanding final year student in the School of Electrical and Electronic Engineering.
+				</p>
+			</li>
+			<li>
+				<p>
+					Tryfan Rogers Memorial Prize: For most outstanding graduating student in the School of Mathematical Sciences.
+				</p>
+			</li>
+			<li>
+		    	<p>
+		    		Marsden Prize: For a student who has gained high distinction in examinations, and has throughout their University careers been of exemplary conduct and given proofs of outstanding character and personality.
+		    	</p>
+			</li>
+		</ul>
+		<h3>
+			2010
+		</h3>
+		<ul>
+			<li>
+				<p>
+		    		University Endowed (Andrew Hendry) Postgraduate Prize 2009/2010
+				</p>
+		 	</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>
+			Presented at
+		</h2>
+		<ul>
+			<li><p>
+				British Applied Mathematics Colloquium - April 2009 (One of four winners of the SIAM prize for best postgraduate student talk)
+			</p></li>
+			<li><p>
+				Applied Optics Group (Run by the Electrical Systems &amp; Optics Research Division) - May 2009<br>
+			</p></li>
+			<li><p>
+				PIERS '09 - Moscow, August 2009 (Two talks)
+			</p></li>
+			<li><p>
+				Theoretical Mechanics Seminar series - Febuary 2010
+			</p></li>
+			<li><p>
+				METAL Workshop - January 2012
+			</p></li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Outside of Work</h2>
+		<ul>
+			<li>Trustee and Finance Manager of <a href="http://gracechurchnottingham.org">Grace Church Nottingham</a></li>
+			<li>A keen DIYer</li>
+			<li>And amateur <a href="http://www.flickr.com/photos/76694815@N02/">photographer</a></li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Contact</h2>
+		<ul class='nobtp'>
+			<li>
+				<img class='btp' src='./images/twitter.png' height='20px'>
+				<a href='http://twitter.com/philingrey'>@philingrey</a>
+			</li>
+			<li><a href='mailto:me@philingrey.com'>me@philingrey.com</a></li>
+		</ul>
+	</section>
+</div>
+</body>
+</html>
