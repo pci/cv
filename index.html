@@ -12,15 +12,9 @@
 			font-family:Helvetica,Arial,sans-serif;
 			font-size: 14px;
 		}
-
-		/* apply a natural box layout model to all elements - bit.ly/borderboxftw */
-		* { 
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
 		
 		article{ position:relative;}
+		aside, article, section { display: block; }
 
 		header{
 			color:white;
@@ -28,7 +22,7 @@
 			background-image: -moz-linear-gradient(top, #666, #333);
 			background-image: -webkit-linear-gradient(top, #666, #333);
 			background-image: -o-linear-gradient(top, #666, #333);
-			background-image: -linear-gradient(top, #666, #333);
+			background-image: linear-gradient(top, #666, #333);
 		}
 
 		h1 {
@@ -90,16 +84,20 @@
 			break-inside:avoid;
 		}
 
-		.multi-col h2{
+		h2{
 			text-align:center;
 			font-family: 'Kaushan Script', cursive;
 			font-weight: 400;
 			margin:-15px -15px 5px;
 		}
 
-		.skills h3{
+		h3{
 			margin-top:20px;
 			margin-bottom:2px;
+		}
+
+		h4 {
+			margin-top:2px;
 		}
 
 		.nobtp{
@@ -134,8 +132,107 @@
 		    border-bottom-right-radius: 10px;
 		}
 
+		/* colourings from Twitter Bootstrap - got to love open source :) */
+		
+		.skillh {
+			display:inline-block;
+			padding: 4px 10px 4px;
+			margin-right:10px;
+			font-size: 13px;
+			line-height: 18px;
+			color: #333333;
+			text-align: center;
+			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+			background-color: #fafafa;
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+			background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+			background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+			background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+			background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+			background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+			background-repeat: no-repeat;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+			border: 1px solid #ccc;
+			border-bottom-color: #bbb;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+			-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+			cursor: pointer;
+		}
+
+		.skillh:hover {
+		  text-decoration: none;
+		  background-color: #e6e6e6;
+		  background-position: 0 -15px;
+		  -webkit-transition: background-position 0.1s linear;
+		  -moz-transition: background-position 0.1s linear;
+		  -ms-transition: background-position 0.1s linear;
+		  -o-transition: background-position 0.1s linear;
+		  transition: background-position 0.1s linear;
+		}
+
+		.s1, .s2, .s3 {
+		  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		  color: #ffffff;
+		}
+
+		.s2 {
+		  background-color: #faa732;
+		  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+		  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+		  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+		  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+		  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+		  background-image: linear-gradient(top, #fbb450, #f89406);
+		  background-repeat: repeat-x;
+		  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+		  border-color: #f89406 #f89406 #ad6704;
+		  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		}
+		.s2:hover {
+		  background-color: #f89406;
+		}
+
+		.s3 {
+		  background-color: #da4f49;
+		  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+		  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
+		  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+		  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+		  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+		  background-image: linear-gradient(top, #ee5f5b, #bd362f);
+		  background-repeat: repeat-x;
+		  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
+		  border-color: #bd362f #bd362f #802420;
+		  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		}
+		.s3:hover {
+		  background-color: #bd362f;
+		}
+		
+		.s1 {
+		  background-color: #5bb75b;
+		  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+		  background-image: -ms-linear-gradient(top, #62c462, #51a351);
+		  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+		  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+		  background-image: -o-linear-gradient(top, #62c462, #51a351);
+		  background-image: linear-gradient(top, #62c462, #51a351);
+		  background-repeat: repeat-x;
+		  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+		  border-color: #51a351 #51a351 #387038;
+		  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		}
+		.s1:hover {
+		  background-color: #51a351;
+		}
+
 		/* remember to change this back to screen!!! */
-		@media print and (min-width: 700px) {
+		@media only print and (min-width: 700px) {
 			.printonly{
 				visibility: hidden;
 				display:none;
@@ -151,113 +248,6 @@
 			.screensuffixed:after{
 				content: attr(data-suffix);
 				font-size:0.6em;
-			}
-
-			/* colourings from Twitter Bootstrap - got to love open source :) */
-
-			.skill {
-				display: inline-block;
-				padding: 4px 10px 4px;
-				margin-right:10px;
-				float:left;
-				font-size: 13px;
-				line-height: 18px;
-				color: #333333;
-				text-align: center;
-				text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-				background-color: #fafafa;
-				background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
-				background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-				background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
-				background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-				background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-				background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-				background-repeat: no-repeat;
-				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-				border: 1px solid #ccc;
-				border-bottom-color: #bbb;
-				border-radius: 4px;
-				-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-				-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-				cursor: pointer;
-			}
-
-			.skill:hover {
-			  text-decoration: none;
-			  background-color: #e6e6e6;
-			  background-position: 0 -15px;
-			  -webkit-transition: background-position 0.1s linear;
-			  -moz-transition: background-position 0.1s linear;
-			  -ms-transition: background-position 0.1s linear;
-			  -o-transition: background-position 0.1s linear;
-			  transition: background-position 0.1s linear;
-			}
-
-			.s1, .s2, .s3 {
-			  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-			  color: #ffffff;
-			}
-
-			.s2 {
-			  background-color: #faa732;
-			  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-			  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-			  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-			  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-			  background-image: linear-gradient(top, #fbb450, #f89406);
-			  background-repeat: repeat-x;
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-			  border-color: #f89406 #f89406 #ad6704;
-			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-			  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-			}
-			.s2:hover {
-			  background-color: #f89406;
-			}
-
-			.s3 {
-			  background-color: #da4f49;
-			  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-			  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-			  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-			  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-			  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-			  background-repeat: repeat-x;
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-			  border-color: #bd362f #bd362f #802420;
-			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-			  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-			}
-			.s3:hover {
-			  background-color: #bd362f;
-			}
-			
-			.s1 {
-			  background-color: #5bb75b;
-			  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-			  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-			  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-			  background-image: -o-linear-gradient(top, #62c462, #51a351);
-			  background-image: linear-gradient(top, #62c462, #51a351);
-			  background-repeat: repeat-x;
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-			  border-color: #51a351 #51a351 #387038;
-			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-			  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-			}
-			.s1:hover {
-			  background-color: #51a351;
-			}
-
-			.skills:after{
-				content:'.';
-				visibility: hidden;
-				height:0;
-				clear:both;
 			}
 
 			article > aside{
@@ -309,10 +299,15 @@
 				-ms-transform: scale(1.0);
 				transform: scale(1.0);
 			}
+
+			.skill { float:left; }
+
+			.skills {clear:both; }
+			section:after {content: ".";color:transparent;clear:both;}
 		}
 
 		/* remember to change this to print when you're done!!! */
-		@media screen {
+		@media only screen {
 			.screenonly{
 				visibility: hidden;
 				display:none;
@@ -343,6 +338,9 @@
 				border-radius:0;
 				box-shadow:none;
 			}
+
+			.skill{clear:both;}
+			.skillh{float:left;}
 		}
 	</style>
 </head>
@@ -381,63 +379,63 @@
 		
 		<section class="skills">
 			<h3>Mathematics</h3>
-			<article class="skill s3">
-				Mathematica
+			<article class="skill">
+				<h4 class="skillh s3">Mathematica</h4>
 				<aside>Experience: 5+ years. Mathematica is my current day-to-day programming enviroment. I have wide ranging experience with Mathematica, including image processing, prototyping code, multi-core deployment and data-mining</aside>
 			</article>
-			<article class="skill s2">
-				Matlab
+			<article class="skill">
+				<h4 class="skillh s2">Matlab</h4>
 				<aside>Experience: 2 years. Experience with Matlab centered around multi-dimensional-scaling, the problem of determining a collection of object's positions when given their inter-distances</aside>
 			</article>
-			<article class="skill s2">
-				Maple
+			<article class="skill">
+				<h4 class="skillh s2">Maple</h4>
 				<aside>Experience: 3 years. Wide knowledge of Maple</aside>
 			</article>
 		</section>
 		
 		<section class="skills">
 			<h3>Programming</h3>
-			<article class="skill s3">
-				C/C++
+			<article class="skill">
+				<h4 class="skillh s3">C/C++</h4>
 				<aside> C and C++ have been my main high-performance languages for the last 5 years, I've experience using the GNU debugger, optimising code, and using numerical libraries such as the GNU software library
 					<footer>Experience: 5+ years</footer>
 				</aside>
 			</article>
-			<article class="skill s2">
-				Python
+			<article class="skill">
+				<h4 class="skillh s2">Python</h4>
 				<aside>Experience: 3 years.
 					<footer>Experience: 3 years</footer></aside>
 			</article>
-			<article class="skill s1">
-				SQL
+			<article class="skill">
+				<h4 class="skillh s1">SQL</h4>
 				<aside>
 					Knowledge of SQL language, database design, UML, recursion, and the basics of NoSQL and where it might be appropriate.
 					<footer>Experience: 1 years.</footer>
 				</aside>
 			</article>
-			<article class="skill s2">
-				...
+			<article class="skill">
+				<h4 class="skillh s2">...</h4>
 				<aside>Other languages I've had experience with: Java, Perl, C#, Fortran, BASIC, VB and I'm currently learning lisp.</aside>
 			</article>
 		</section>
 		
 		<section class="skills">
 			<h3>High Performance Computing</h3>
-			<article class="skill s1">
-				MPI
+			<article class="skill">
+				<h4 class="skillh s1">MPI</h4>
 				<aside>
 
 				</aside>
 			</article>
-			<article class="skill s2">
-				CUDA
+			<article class="skill">
+				<h4 class="skillh s2">CUDA</h4>
 				<aside>
 					I have created and deployed large scale genetic algorithm computations on GPUs through the CUDA enviroment. This involved consideration of architecture and utilising different memory types to acheive a 308x speed-up over a compairable CPU solution.
 					<footer>Experience: 2 years</footer>
 				</aside>
 			</article>
-			<article class="skill s3">
-				Monte-Carlo Simulations
+			<article class="skill">
+				<h4 class="skillh s3">Monte-Carlo Simulations</h4>
 				<aside>
 					A Monte-Carlo simulations to calculate the statistics of light in a media due to roughness at its surface was investigated using the university of Nottingham's high performance computing (hpc) clusters. As well as running the several million individual processes, the results had to be colated, transfered from the hpc, and analysed.
 					<footer>Experience: 3 years</footer>
@@ -447,55 +445,55 @@
 		
 		<section class="skills">
 			<h3>Web-based</h3>
-			<article class="skill s3">
-				HTML
+			<article class="skill">
+				<h4 class="skillh s3">HTML</h4>
 				<aside>
 					I know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
-			<article class="skill s2">
-				CSS
+			<article class="skill">
+				<h4 class="skillh s2">CSS</h4>
 				<aside>
 					Whilst not greatly gifted as a designer, I enjoy using the additional flexiblity that CCS3 affords to make interesting, resonsive sites that can gracefully degrade for less capable browsers. 
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
-			<article class="skill s3">
-				Javascript
+			<article class="skill">
+				<h4 class="skillh s3">Javascript</h4>
 				<aside>
 					I have built several javascript orientated . CoffeeScript!
 				</aside>
 			</article>
-			<article class="skill s2">
-				XML
+			<article class="skill">
+				<h4 class="skillh s2">XML</h4>
 			</article>
-			<article class="skill s3">
-				PHP
+			<article class="skill">
+				<h4 class="skillh s3">PHP</h4>
 			</article>
-			<article class="skill s2">
-				Node.js
+			<article class="skill">
+				<h4 class="skillh s2">Node.js</h4>
 			</article>
 		</section>
 		
 		<section class="skills">
 			<h3>OSs</h3>
-			<article class="skill s2">
-				Linux
+			<article class="skill">
+				<h4 class="skillh s2">Linux</h4>
 				<aside>
 					Both my work and home computers run linux as their primary OS (CentOS and ubuntu respectively). I've setup several LAMP and node.js servers and am competent at both the terminal and shell scripting.
 					<footer>Experience: 7 years</footer>
 				</aside>
 			</article>
-			<article class="skill s3">
-				Mac OS
+			<article class="skill">
+				<h4 class="skillh s3">Mac OS</h4>
 				<aside>
 
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
-			<article class="skill s3">
-				Windows
+			<article class="skill">
+				<h4 class="skillh s3">Windows</h4>
 				<aside>
 					I've been using windows since windows 3.1
 					<footer>Experience: 10+ years</footer>
