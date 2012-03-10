@@ -42,6 +42,13 @@
 			padding:21px;
 		}
 
+		/* A handful of useful classes */
+		.c {margin: 0 auto;}
+		.db {display:block;}
+		.w25 {width: 25%;}
+		.w50 {width: 50%;}
+		.w75 {width: 75%;}
+
 		.prefixed:before{
 			content: attr(data-prefix);
 			font-size:0.6em;
@@ -127,7 +134,18 @@
 		    border-bottom-right-radius: 10px;
 		}
 
-		@media screen and (min-width: 700px) {
+		/* remember to change this back to screen!!! */
+		@media print and (min-width: 700px) {
+			.printonly{
+				visibility: hidden;
+				display:none;
+			}
+
+			.screenonly {
+				visibility: visible;
+				display: block;
+			}
+
 			/* colourings from Twitter Bootstrap - got to love open source :) */
 
 			.skill {
@@ -157,6 +175,7 @@
 				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 				cursor: pointer;
 			}
+
 			.skill:hover {
 			  text-decoration: none;
 			  background-color: #e6e6e6;
@@ -283,6 +302,20 @@
 				-ms-transform: scale(1.0);
 				transform: scale(1.0);
 			}
+		}
+
+		/* remember to change this to print when you're done!!! */
+		@media screen {
+			.screenonly{
+				visibility: hidden;
+				display:none;
+			}
+
+			.printonly {
+				visibility: visible;
+				display: block;
+			}
+
 		}
 	</style>
 </head>
@@ -490,7 +523,7 @@
 		<ul>
 			<li>
 				<p>
-					Letter of commendation from the head of school for outstanding achievement during the first year of study
+					Letter of commendation from the head of department for outstanding achievement during the first year of study
 				</p>
 			</li>
 		</ul>
@@ -577,6 +610,12 @@
 			</li>
 			<li><a href='mailto:me@philingrey.com'>me@philingrey.com</a></li>
 		</ul>
+	</section>
+
+	<section class="printonly">
+		<h2>Online Version</h2>
+		<p>An online version of this cv can be found at <a href="http://philingrey.com/cv/">http://philingrey.com/cv/</a>, alternatively use the QR code below</p>
+		<img class="c db w50" src="images/qr.png">
 	</section>
 </div>
 </body>
