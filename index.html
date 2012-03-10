@@ -140,10 +140,17 @@
 				visibility: hidden;
 				display:none;
 			}
-
 			.screenonly {
 				visibility: visible;
 				display: block;
+			}
+			.screenprefixed:before{
+				content: attr(data-prefix);
+				font-size:0.6em;
+			}
+			.screensuffixed:after{
+				content: attr(data-suffix);
+				font-size:0.6em;
 			}
 
 			/* colourings from Twitter Bootstrap - got to love open source :) */
@@ -310,12 +317,32 @@
 				visibility: hidden;
 				display:none;
 			}
-
 			.printonly {
 				visibility: visible;
 				display: block;
 			}
+			.printprefixed:before{
+				content: attr(data-prefix);
+				font-size:0.6em;
+			}
+			.printsuffixed:after{
+				content: attr(data-suffix);
+				font-size:0.6em;
+			}
+		
+			.multi-col{
+				-moz-column-rule: 1px solid black;
+				-webkit-column-rule: 1px solid black;
+				column-rule: 1px solid black;
+			}
 
+			.multi-col > section{
+				border-top:none;
+				border-left:none;
+				border-right:none;
+				border-radius:0;
+				box-shadow:none;
+			}
 		}
 	</style>
 </head>
@@ -350,7 +377,7 @@
 
 
 	<section>
-		<h2 class="suffixed" data-suffix="  (hover for details)">Skills</h2>
+		<h2 class="screensuffixed" data-suffix="  (hover for details)">Skills</h2>
 		
 		<section class="skills">
 			<h3>Mathematics</h3>
@@ -614,7 +641,7 @@
 
 	<section class="printonly">
 		<h2>Online Version</h2>
-		<p>An online version of this cv can be found at <a href="http://philingrey.com/cv/">http://philingrey.com/cv/</a>, alternatively use the QR code below</p>
+		<p>An online version of this cv can be found at <a href="http://philingrey.com/cv/">http://philingrey.com/cv/</a>, alternatively you can reach this page using the QR code below</p>
 		<img class="c db w50" src="images/qr.png">
 	</section>
 </div>
