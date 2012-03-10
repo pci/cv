@@ -12,6 +12,13 @@
 			font-family:Helvetica,Arial,sans-serif;
 			font-size: 14px;
 		}
+
+		/* apply a natural box layout model to all elements - bit.ly/borderboxftw */
+		* {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
 		
 		article{ position:relative;}
 		aside, article, section { display: block; }
@@ -232,7 +239,7 @@
 		}
 
 		/* remember to change this back to screen!!! */
-		@media only print and (min-width: 700px) {
+		@media only screen and (min-width: 700px) {
 			.printonly{
 				visibility: hidden;
 				display:none;
@@ -301,13 +308,24 @@
 			}
 
 			.skill { float:left; }
-
 			.skills {clear:both; }
 			section:after {content: ".";color:transparent;clear:both;}
 		}
 
 		/* remember to change this to print when you're done!!! */
-		@media only screen {
+		@media only print {
+			html, body {font-size:10px;}
+			.skillh{font-size:10px;}
+
+			.multi-col{
+				width:100%;
+				-moz-column-width:auto;
+				-webkit-column-width:auto;
+				column-width:auto;
+				-moz-column-count:2;
+				-webkit-column-count:2;
+				column-count:2;
+			}
 			.screenonly{
 				visibility: hidden;
 				display:none;
@@ -339,8 +357,27 @@
 				box-shadow:none;
 			}
 
-			.skill{clear:both;}
-			.skillh{float:left;}
+			.skillh {float:left;}
+			.skill, .skills {clear:both;}
+
+			article {
+				clear:both;
+				display:block;
+				padding-top:20px;
+			}
+			article:first-of-type{padding:none;}
+
+			article:before{
+				content:".";
+				color:transparent;
+				width:50px;
+				position: absolute;
+				top:10px;
+				left:50%;
+				border-top:1px solid black;
+			}
+			article:first-of-type:before{border-top:none;}
+			section:after {content: ".";color:transparent;clear:both;}
 		}
 	</style>
 </head>
@@ -435,7 +472,7 @@
 				</aside>
 			</article>
 			<article class="skill">
-				<h4 class="skillh s3">Monte-Carlo Simulations</h4>
+				<h4 class="skillh s3">Monte-Carlo<br>Simulations</h4>
 				<aside>
 					A Monte-Carlo simulations to calculate the statistics of light in a media due to roughness at its surface was investigated using the university of Nottingham's high performance computing (hpc) clusters. As well as running the several million individual processes, the results had to be colated, transfered from the hpc, and analysed.
 					<footer>Experience: 3 years</footer>
@@ -525,7 +562,7 @@
 			2008<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14></a>
 		</h3>
 		<p>
-			<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14>Direct Computation of Statistical Variations in Electromagnetic Problems</a>, Transactions on Electromagnetic Compatibility, vol. 50, Issue 2, pp. 325-332 (which came <font size=2>second in the IEEE EMC Best Paper Awards</font>)
+			<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14>Direct Computation of Statistical Variations in Electromagnetic Problems</a>, Transactions on Electromagnetic Compatibility, vol. 50, Issue 2, pp. 325-332 (which came second in the IEEE EMC Best Paper Awards)
 		</p>
 		<p>
 			<a href=http://www.sciencedirect.com/science?_ob=ArticleURL&amp;_udi=B6TVF-4V35679-2&amp;_user=5939061&amp;_rdoc=1&amp;_fmt=&amp;_orig=search&amp;_sort=d&amp;view=c&amp;_acct=C000009959&amp;_version=1&amp;_urlVersion=0&amp;_userid=5939061&amp;md5=2651817656d5c4069bfa0e6ae41d8902>Between right- and left-hand media</a>, Optics Communications, vol. 282, Issue 5, pp. 1020-1027
