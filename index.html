@@ -69,10 +69,6 @@
 			text-decoration:none;
 		}
 
-		h3 {
-			margin-bottom:0;
-		}
-
 		.multi-col{
 			max-width:1000px;
 			margin:10px auto 0;
@@ -319,18 +315,9 @@
 
 		/* remember to change this to print when you're done!!! */
 		@media only print {
-			html, body {font-size:12px;}
-			.skillh{font-size:12px;}
-
-			.multi-col{
-				width:100%;
-				-moz-column-width:auto;
-				-webkit-column-width:auto;
-				column-width:auto;
-				-moz-column-count:2;
-				-webkit-column-count:2;
-				column-count:2;
-			}
+			html, body {font-size:11px;}
+			.skillh{font-size:10px;}
+			h1 {text-shadow:none;}
 			.screenonly{
 				visibility: hidden;
 				display:none;
@@ -347,6 +334,16 @@
 				content: attr(data-suffix);
 				font-size:0.6em;
 			}
+
+			.multi-col{
+				width:100%;
+				-moz-column-width:auto;
+				-webkit-column-width:auto;
+				column-width:auto;
+				-moz-column-count:2;
+				-webkit-column-count:2;
+				column-count:2;
+			}
 		
 			.multi-col{
 				-moz-column-rule: 1px solid black;
@@ -360,6 +357,13 @@
 				border-right:none;
 				border-radius:0;
 				box-shadow:none;
+			}
+
+			.skillh {
+				text-shadow: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
 			}
 
 			.skillh {float:left;}
@@ -423,15 +427,15 @@
 			<h3>Mathematics</h3>
 			<article class="skill">
 				<h4 class="skillh s3">Mathematica</h4>
-				<aside>Experience: 5+ years. Mathematica is my current day-to-day programming enviroment. I have wide ranging experience with Mathematica, including image processing, prototyping code, multi-core deployment and data-mining</aside>
+				<aside>Mathematica is my current day-to-day programming enviroment. I have wide ranging experience with Mathematica, including image processing, prototyping code, multi-core deployment, data visulisation and data-mining<footer>Experience: 5+ years</footer></aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s2">Matlab</h4>
-				<aside>Experience: 2 years. Experience with Matlab centered around multi-dimensional-scaling, the problem of determining a collection of object's positions when given their inter-distances</aside>
+				<aside>Experience with Matlab centers around multi-dimensional-scaling, the problem of determining a collection of object's positions when given their only the distances between them<footer>Experience: 2 years</footer></aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s2">Maple</h4>
-				<aside>Experience: 3 years. Wide knowledge of Maple</aside>
+				<aside>Wide knowledge of Maple<footer>Experience: 3 years</footer></aside>
 			</article>
 		</section>
 		
@@ -439,19 +443,19 @@
 			<h3>Programming</h3>
 			<article class="skill">
 				<h4 class="skillh s3">C/C++</h4>
-				<aside> C and C++ have been my main high-performance languages for the last 5 years, I've experience using the GNU debugger, optimising code, and using numerical libraries such as the GNU software library
+				<aside>C and C++ have been my main high-performance languages for the last 5 years, I've experience using the GNU debugger, optimising code, and using numerical libraries such as the GNU software library
 					<footer>Experience: 5+ years</footer>
 				</aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s2">Python</h4>
-				<aside>Experience: 3 years.
+				<aside>I have used python for a number of years building some larger-scale programs but, primaraly, creating programs to change data files from one document schema to another.
 					<footer>Experience: 3 years</footer></aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s1">SQL</h4>
 				<aside>
-					Knowledge of SQL language, database design, UML, recursion, and the basics of NoSQL and where it might be appropriate.
+					Knowledge of SQL language including database design, UML, recursion, and the basics of NoSQL and where it might be appropriate.
 					<footer>Experience: 1 years.</footer>
 				</aside>
 			</article>
@@ -466,7 +470,8 @@
 			<article class="skill">
 				<h4 class="skillh s1">MPI</h4>
 				<aside>
-
+					Experience creating a one-master-many-slave programming paradigm with MPI for a variety of computation problems.
+					<footer>Experience 1 year</footer>
 				</aside>
 			</article>
 			<article class="skill">
@@ -479,7 +484,7 @@
 			<article class="skill">
 				<h4 class="skillh s3">Monte-Carlo<br>Simulations</h4>
 				<aside>
-					A Monte-Carlo simulations to calculate the statistics of light in a media due to roughness at its surface was investigated using the university of Nottingham's high performance computing (hpc) clusters. As well as running the several million individual processes, the results had to be colated, transfered from the hpc, and analysed.
+					My largest Monte-Carlo simulation to day was in calculating the statistics of light in a media due to roughness at its surface, which was investigated using the university of Nottingham's high performance computing (hpc) clusters. As well as running the several million individual processes, the results had to be collated, transfered, analysed and visulised.
 					<footer>Experience: 3 years</footer>
 				</aside>
 			</article>
@@ -490,25 +495,30 @@
 			<article class="skill">
 				<h4 class="skillh s3">HTML</h4>
 				<aside>
-					I know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
+					I like to stay upto date with the latest developments in HTML5 and, as such, know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s2">CSS</h4>
 				<aside>
-					Whilst not greatly gifted as a designer, I enjoy using the additional flexiblity that CCS3 affords to make interesting, resonsive sites that can gracefully degrade for less capable browsers. 
+					Whilst design is not my strongest gifting, I do enjoy using the additional flexiblity that CCS3 affords to make interesting, resonsive sites that can gracefully degrade for less capable browsers. I also am aware of, and have used, both LESS and SASS.
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s3">Javascript</h4>
 				<aside>
-					I have built several javascript orientated . CoffeeScript!
+					I have built several javascript heavy web-programs. Ranging from a ray-optics demonstration, that is now used by the university of nottingham, to an image encoding and decoding site as an implementation of my post-doctural work.
+					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s2">XML</h4>
+				<aside>
+					I've been involved with several projects using XML, including one modifing .pptx files. I have knowledge of XPath, XSLT and Xquery.
+					<footer>Experience: 3 years</footer>
+				</aside>
 			</article>
 			<article class="skill">
 				<h4 class="skillh s3">PHP</h4>

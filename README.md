@@ -6,7 +6,7 @@ Feel free to fork and use for your own cv, just down forget to change the detail
 
 ## Printing a pdf
 
-The cv contains stylings for print, however trial and error has shown (at least on a mac) the best combination is safari and print to pdf with "include backgrounds" checked (it's an advanced option in the print dialog) and "include headers and footers" unchecked.
+The cv contains stylings for print, however trial and error has shown (at least on a mac) the best combination is firefox and print to pdf with "include background colors" checked (it's an advanced option in the print dialog) and "headers and footers" all set to "--blank--".
 
 ## License
 
