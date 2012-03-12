@@ -44,6 +44,10 @@
 			padding:21px;
 		}
 
+		a {
+			text-decoration:none;
+		}
+
 		/* A handful of useful classes */
 		.c {margin: 0 auto;}
 		.db {display:block;}
@@ -59,10 +63,6 @@
 		.suffixed:after{
 			content: attr(data-suffix);
 			font-size:0.6em;
-		}
-
-		a {
-			text-decoration:none;
 		}
 
 		.multi-col{
@@ -313,11 +313,14 @@
 
 		/* remember to change this to print when you're done!!! */
 		@media only print {
+			/* A bit of resizing for print */
 			html, body {font-size:11px;text-align:justify;}
 			.skillh{font-size:10px;}
 			p{margin-top:7px;margin-bottom:7px;}
 			h1{text-shadow:none;}
 			h3{margin-top:10px;}
+
+			/* screen/print only classes */
 			.screenonly{
 				visibility: hidden;
 				display:none;
@@ -335,12 +338,14 @@
 				font-size:0.6em;
 			}
 
+			/* Make links look less....well linky... in print */
 			a:link, a:visited {
 				color: #520;
 				background: transparent;
 				font-weight: bold;
 			}
 
+			/* Force two columns and change bubbles into line dividers */
 			.multi-col{
 				width:100%;
 				-moz-column-width:auto;
@@ -357,6 +362,7 @@
 				column-rule: 1px solid black;
 			}
 
+			/* currently box-shadow causes nasty black boxes in print to pdf */
 			.multi-col > section{
 				border-top:none;
 				border-left:none;
@@ -372,6 +378,7 @@
 				box-shadow: none;
 			}
 
+			/* Change the display of skills */
 			.skillh {float:left;}
 			.skill, .skills {clear:both;}
 
@@ -394,6 +401,7 @@
 			article:first-of-type:before{border-top:none;}
 			section:after {content: ".";color:transparent;clear:both;}
 
+			/* Resize the polariod so it doesn't hit text */
 			.polariod{
 				width:60px; /* 100px*0.6 */
 				height:60px; /* 100px*0.6 */
