@@ -6,6 +6,9 @@
 -->
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
 	<title>Philip Ingrey - Curriculum Vitae</title>
 	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<style type="text/css">
@@ -16,13 +19,6 @@
 			width:100%;
 			font-family:Helvetica,Arial,sans-serif;
 			font-size: 14px;
-		}
-
-		/* apply a natural box layout model to all elements - bit.ly/borderboxftw */
-		* {
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
 		}
 		
 		article{ position:relative;}
@@ -116,6 +112,8 @@
 			position:absolute;
 			right:20px;
 			top:0px;
+			width:100px;
+			height:100px;
 			box-shadow:3px 3px 5px black;
 			-moz-transform: rotate(5deg);
 			-webkit-transform: rotate(5deg);
@@ -247,7 +245,7 @@
 			}
 			.screenonly {
 				visibility: visible;
-				display: block;
+				display: inline;
 			}
 			.screenprefixed:before{
 				content: attr(data-prefix);
@@ -315,7 +313,7 @@
 
 		/* remember to change this to print when you're done!!! */
 		@media only print {
-			html, body {font-size:11px;}
+			html, body {font-size:11px;text-align:justify;}
 			.skillh{font-size:10px;}
 			h1 {text-shadow:none;}
 			.screenonly{
@@ -333,6 +331,12 @@
 			.printsuffixed:after{
 				content: attr(data-suffix);
 				font-size:0.6em;
+			}
+
+			a:link, a:visited {
+				color: #520;
+				background: transparent;
+				font-weight: bold;
 			}
 
 			.multi-col{
@@ -393,7 +397,7 @@
 <body>
 <header>
 	<h1 class="prefixed suffixed" data-prefix="Dr" data-suffix="BEng PhD"> Philip Charles Ingrey </h1>
-	<div class="polariod"><img src="http://placekitten.com/100/100"></div>
+	<div class="polariod"><img weight="100%" src="http://placekitten.com/100/100"></div>
 </header>
 <div class="multi-col">
 	<section>
@@ -412,7 +416,7 @@
 				</li>
 				<li>
 			 		<p>
-						Recipient of a research fellowships from the Royal Commission for the Exhibition of 1851 - <a href='http://www.royalcommission1851.org.uk/recent2010.html'>'Automated key generation in texture coding'</a> - <a href="files/Outline.pdf">Lay Statement</a> [pdf]
+						Recipient of a research fellowships from the Royal Commission for the Exhibition of 1851 - <a href='http://www.royalcommission1851.org.uk/recent2010.html'>'Automated key generation in texture coding'</a> <a href="files/Outline.pdf" class="screenonly">- Lay Statement [pdf]</a>
 			 		</p>
 				</li>
 			</ul>
@@ -433,10 +437,6 @@
 				<h4 class="skillh s2">Matlab</h4>
 				<aside>Experience with Matlab centers around multi-dimensional-scaling, the problem of determining a collection of object's positions when given their only the distances between them<footer>Experience: 2 years</footer></aside>
 			</article>
-			<article class="skill">
-				<h4 class="skillh s2">Maple</h4>
-				<aside>Wide knowledge of Maple<footer>Experience: 3 years</footer></aside>
-			</article>
 		</section>
 		
 		<section class="skills">
@@ -453,6 +453,13 @@
 					<footer>Experience: 3 years</footer></aside>
 			</article>
 			<article class="skill">
+				<h4 class="skillh s3">OSes</h4>
+				<aside>
+					I've experience programing in all three major OS's: Linux (7 years) - Both my work and home computers run linux as their primary OS (CentOS and ubuntu respectively), I've setup several LAMP and one node.js server and am competent at both the terminal and shell scripting. Mac (4 years). Windows (10+ years).
+					<footer>Experience: 10+ years</footer>
+				</aside>
+			</article>
+			<article class="skill">
 				<h4 class="skillh s1">SQL</h4>
 				<aside>
 					Knowledge of SQL language including database design, UML, recursion, and the basics of NoSQL and where it might be appropriate.
@@ -460,7 +467,7 @@
 				</aside>
 			</article>
 			<article class="skill">
-				<h4 class="skillh s2">...</h4>
+				<h4 class="skillh s2">Others</h4>
 				<aside>Other languages I've had experience with: Java, Perl, C#, Fortran, BASIC, VB and I'm currently learning lisp.</aside>
 			</article>
 		</section>
@@ -495,7 +502,7 @@
 			<article class="skill">
 				<h4 class="skillh s3">HTML</h4>
 				<aside>
-					I like to stay upto date with the latest developments in HTML5 and, as such, know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
+					I stay up to date with the latest developments in HTML5 and, as such, know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
@@ -516,7 +523,7 @@
 			<article class="skill">
 				<h4 class="skillh s2">XML</h4>
 				<aside>
-					I've been involved with several projects using XML, including one modifing .pptx files. I have knowledge of XPath, XSLT and Xquery.
+					I've been involved with several projects using XML, including one querying and modifing exsisting .pptx files. I have knowledge of XPath, XSLT and Xquery.
 					<footer>Experience: 3 years</footer>
 				</aside>
 			</article>
@@ -525,31 +532,6 @@
 			</article>
 			<article class="skill">
 				<h4 class="skillh s2">Node.js</h4>
-			</article>
-		</section>
-		
-		<section class="skills">
-			<h3>OSs</h3>
-			<article class="skill">
-				<h4 class="skillh s2">Linux</h4>
-				<aside>
-					Both my work and home computers run linux as their primary OS (CentOS and ubuntu respectively). I've setup several LAMP and node.js servers and am competent at both the terminal and shell scripting.
-					<footer>Experience: 7 years</footer>
-				</aside>
-			</article>
-			<article class="skill">
-				<h4 class="skillh s3">Mac OS</h4>
-				<aside>
-
-					<footer>Experience: 4 years</footer>
-				</aside>
-			</article>
-			<article class="skill">
-				<h4 class="skillh s3">Windows</h4>
-				<aside>
-					I've been using windows since windows 3.1
-					<footer>Experience: 10+ years</footer>
-				</aside>
 			</article>
 		</section>
 	</section>
@@ -682,10 +664,11 @@
 		<h2>Contact</h2>
 		<ul class='nobtp'>
 			<li>
-				<img class='btp' src='./images/twitter.png' height='20px'>
+				<img class='btp' src='./images/twitter.png' width='20px'>
 				<a href='http://twitter.com/philingrey'>@philingrey</a>
 			</li>
-			<li><a href='mailto:me@philingrey.com'>me@philingrey.com</a></li>
+				<img class='btp' src='./images/email.png' width='20px'>
+				<a href='mailto:me@philingrey.com'>me@philingrey.com</a></li>
 		</ul>
 	</section>
 
