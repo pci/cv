@@ -1,6 +1,6 @@
-##This is a WIP draft.
+## Intro
 
-This is a copy of my web-based CV. It's fully buzz-word compliant (html5, css3 responsive design).
+This is a copy of my web-based CV. It's fully buzz-word compliant (html5, css3, responsive design, progressive enhancement).
 
 A live version of this cv can be found at http://philingrey.com/cv/
 

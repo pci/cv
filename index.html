@@ -116,8 +116,8 @@
 			position:absolute;
 			right:20px;
 			top:0px;
-			width:100px;
-			height:100px;
+			width:75px;
+			height:75px;
 			box-shadow:3px 3px 5px black;
 			-moz-transform: rotate(5deg);
 			-webkit-transform: rotate(5deg);
@@ -126,20 +126,20 @@
 			transform: rotate(5deg);
 			display:block;
 			background:white;
-			padding:10px 5px 20px;
+			padding:6px 3px 12px;
 		}
 
 		.polariod:after {
 			content: ".";
 			color:transparent;
-		    width: 7px;
-		    height: 20px;
+		    width: 3px;
+		    height: 10px;
 		    position: absolute;
 		    top: 0;
-		    left:7px;
+		    left:3px;
 		    border: 1px solid black;
-		    border-bottom-left-radius: 10px;
-		    border-bottom-right-radius: 10px;
+		    border-bottom-left-radius: 5px;
+		    border-bottom-right-radius: 5px;
 		}
 
 		/* colourings from Twitter Bootstrap - got to love open source :) */
@@ -277,6 +277,9 @@
 				font-size:0.6em;
 			}
 
+			/* Got a bit more room to spread out */
+			.multi-col{ width:90%; }
+
 			article > aside{
 				-moz-transition: all .2s ease-in-out; 
 				-webkit-transition: all .2s ease-in-out; 
@@ -296,7 +299,7 @@
 				padding:5px;
 				width: 400px;
 				bottom:120%;
-				left:0;
+				left:-10px;
 			}
 
 			article > aside:before,aside:after {
@@ -306,14 +309,14 @@
 				top:100%;
 				width: 0;
 				height: 0;
-				left:4px;
+				left:14px;
 				border-left: 11px solid transparent;
 				border-right: 11px solid transparent;
 				border-top: 11px solid black;
 			}
 
 			article > aside:after {
-				left:5px;
+				left:15px;
 				border-left: 10px solid transparent;
 				border-right: 10px solid transparent;
 				border-top: 10px solid white;
@@ -329,6 +332,23 @@
 
 			.skill { float:left; }
 			.skills {clear:both; }
+		}
+
+		@media screen and (min-width: 1200px){
+			/* Resize the polariod as you've got a bit more space */
+			.polariod{
+				width:100px; /* 60px*1.7 */
+				height:100px; /* 60px*1.7 */
+				padding:10px 5px 20px;  /* {6 3 12}px*1.7 */
+			}
+
+			.polariod:after {
+			    width: 6px; /* 3px*2 */
+			    height: 20px; /* 10px*2 */
+			    left:6px; /* 3px*2 */
+			    border-bottom-left-radius: 10px; /* 5px*2 */
+			    border-bottom-right-radius: 10px; /*5px *2 */
+			}
 		}
 
 		/* remember to change this to print when you're done!!! */
@@ -418,21 +438,9 @@
 			}
 			article:first-of-type:before{border-top:none;}
 
-			/* Resize the polariod so it doesn't hit text */
 			.polariod{
-				width:60px; /* 100px*0.6 */
-				height:60px; /* 100px*0.6 */
-				padding:6px 3px 12px;  /* {10 5 20}px*0.6 */
 				box-shadow:none;
 				border: 1px solid #444;
-			}
-
-			.polariod:after {
-			    width: 3px;
-			    height: 10px;
-			    left:3px;
-			    border-bottom-left-radius: 5px;
-			    border-bottom-right-radius: 5px;
 			}
 		}
 	</style>
