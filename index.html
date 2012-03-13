@@ -102,6 +102,7 @@
 
 		h4 {
 			margin-top:2px;
+			margin-bottom:2px;
 		}
 
 		.nobtp{
@@ -237,8 +238,10 @@
 		  background-color: #51a351;
 		}
 
+		section:after {content: ".";color:transparent;clear:both;}
+
 		/* remember to change this back to screen!!! */
-		@media only screen and (min-width: 700px) {
+		@media only screen {
 			.printonly{
 				visibility: hidden;
 				display:none;
@@ -247,11 +250,26 @@
 				visibility: visible;
 				display: inline;
 			}
+			.widescreenonly{
+				visibility: hidden;
+				display: none;
+			}
 			.screenprefixed:before{
 				content: attr(data-prefix);
 				font-size:0.6em;
 			}
 			.screensuffixed:after{
+				content: attr(data-suffix);
+				font-size:0.6em;
+			}
+		}
+
+		@media only screen and (min-width: 700px) {
+			.widescreenonly{
+				visibility: visible;
+				display: inline;
+			}
+			.widescreensuffixed:after{
 				content: attr(data-suffix);
 				font-size:0.6em;
 			}
@@ -308,7 +326,6 @@
 
 			.skill { float:left; }
 			.skills {clear:both; }
-			section:after {content: ".";color:transparent;clear:both;}
 		}
 
 		/* remember to change this to print when you're done!!! */
@@ -399,7 +416,6 @@
 				border-top:1px solid black;
 			}
 			article:first-of-type:before{border-top:none;}
-			section:after {content: ".";color:transparent;clear:both;}
 
 			/* Resize the polariod so it doesn't hit text */
 			.polariod{
@@ -423,7 +439,7 @@
 <body>
 <header>
 	<h1 class="prefixed suffixed" data-prefix="Dr" data-suffix="BEng PhD"> Philip Charles Ingrey </h1>
-	<div class="polariod"><img width="100%" src="http://placekitten.com/100/100"></div>
+	<div class="polariod widescreenonly"><img width="100%" src="http://placekitten.com/100/100"></div>
 </header>
 <div class="multi-col">
 	<section>
@@ -473,64 +489,7 @@
 	</section>
 
 	<section>
-		<h2>
-			Prizes
-		</h2>
-		<h3>
-			2005
-		</h3>
-		<ul>
-			<li>
-				<p>
-					Letter of commendation from the head of department for outstanding achievement during the first year of study
-				</p>
-			</li>
-		</ul>
-		<h3>
-			2006
-		</h3>
-		<ul>
-			<li>
-				<p>
-		    		Price Waterhouse Coopers Mathematics Prize 1: Best overall performance in the second year by a joint honours undergraduate student.
-		    	</p>
-			</li>
-		</ul>
-		<h3>
-			2007
-		</h3>
-		<ul>
-			<li>
-				<p>
-					Institution of Electrical Engineers Prize: For the most outstanding final year student in the School of Electrical and Electronic Engineering.
-				</p>
-			</li>
-			<li>
-				<p>
-					Tryfan Rogers Memorial Prize: For most outstanding graduating student in the School of Mathematical Sciences.
-				</p>
-			</li>
-			<li>
-		    	<p>
-		    		Marsden Prize: For a student who has gained high distinction in examinations, and has throughout their University careers been of exemplary conduct and given proofs of outstanding character and personality.
-		    	</p>
-			</li>
-		</ul>
-		<h3>
-			2010
-		</h3>
-		<ul>
-			<li>
-				<p>
-		    		University Endowed (Andrew Hendry) Postgraduate Prize 2009/2010
-				</p>
-		 	</li>
-		</ul>
-	</section>
-
-
-	<section>
-		<h2 class="screensuffixed" data-suffix="  (hover for details)">Skills</h2>
+		<h2 class="widescreensuffixed" data-suffix="  (hover for details)">Skills</h2>
 		
 		<section class="skills">
 			<h3>Mathematics</h3>
@@ -648,6 +607,64 @@
 			</article>
 		</section>
 	</section>
+
+	<section>
+		<h2>
+			Prizes
+		</h2>
+		<h3>
+			2005
+		</h3>
+		<ul>
+			<li>
+				<p>
+					Letter of commendation from the head of department for outstanding achievement during the first year of study
+				</p>
+			</li>
+		</ul>
+		<h3>
+			2006
+		</h3>
+		<ul>
+			<li>
+				<p>
+		    		Price Waterhouse Coopers Mathematics Prize 1: Best overall performance in the second year by a joint honours undergraduate student.
+		    	</p>
+			</li>
+		</ul>
+		<h3>
+			2007
+		</h3>
+		<ul>
+			<li>
+				<p>
+					Institution of Electrical Engineers Prize: For the most outstanding final year student in the School of Electrical and Electronic Engineering.
+				</p>
+			</li>
+			<li>
+				<p>
+					Tryfan Rogers Memorial Prize: For most outstanding graduating student in the School of Mathematical Sciences.
+				</p>
+			</li>
+			<li>
+		    	<p>
+		    		Marsden Prize: For a student who has gained high distinction in examinations, and has throughout their University careers been of exemplary conduct and given proofs of outstanding character and personality.
+		    	</p>
+			</li>
+		</ul>
+		<h3>
+			2010
+		</h3>
+		<ul>
+			<li>
+				<p>
+		    		University Endowed (Andrew Hendry) Postgraduate Prize 2009/2010
+				</p>
+		 	</li>
+		</ul>
+	</section>
+
+
 
 	<section>
 		<h2>
