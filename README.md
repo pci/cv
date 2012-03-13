@@ -16,6 +16,6 @@ This cv is licensed under an MIT license. Which basically means - do whatever yo
 
 ## Browser Support
 
-Works well in Firefox, Chrome and Safari. Opera mostly works - Skills popups are partial cutoff, but the mobile view is fine.
+Works well in Firefox, Chrome and Safari. Opera mostly works - Skills popups are partial cutoff by multi-column, but the mobile view is fine.
 
 IE - don't know yet, haven't dared to check!
