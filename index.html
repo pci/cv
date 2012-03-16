@@ -266,8 +266,8 @@
 				font-size:0.6em;
 			}
 		}
-
-		@media only screen and (min-width: 700px) {
+/*and (min-width: 700px) */
+		@media only screen {
 			.widescreenonly{
 				visibility: visible;
 				display: inline;
@@ -743,6 +743,26 @@
 	</section>
 </div>
 <script>
+// Add ongoing hover for touch devices
+
+document.addEventListener('touchstart', function(event) {
+	var targ, hb;
+
+	// remove all current hoverings
+	hb = document.querySelectorAll(".hoverable");
+	for (var i = 0; i < hb.length; i++) { hb[i].classList.remove("hovering"); }
+
+	// and bubble through new hoverings
+	if (!e) var e = window.event;
+	if (e.target) targ = e.target;
+	else if (e.srcElement) targ = e.srcElement;
+	while(targ) {
+		if(!targ.classList.contains("hoverable")){
+			targ.classList.add("hovering");
+		} 
+		targ = targ.parentNode;
+	}
+}, false);
 
 </script>
 </body>
