@@ -743,26 +743,23 @@
 	</section>
 </div>
 <script>
-// Add ongoing hover for touch devices
+window.onload = function(){
+	/*
+		Add ongoing hover for touch devices, using event capturing (sent on the way down the DOM) and event bubbling (sent on the way back up)
+	*/
 
-document.addEventListener('touchstart', function(event) {
-	var targ, hb;
+	document.addEventListener('touchstart', function(e) {
+		hb = document.getElementsByClassName('hoverable');
+		for (var i = 0; i < hb.length; i++) { hb[i].classList.remove("hovering"); }
+	}, true);
 
-	// remove all current hoverings
-	hb = document.querySelectorAll(".hoverable");
-	for (var i = 0; i < hb.length; i++) { hb[i].classList.remove("hovering"); }
-
-	// and bubble through new hoverings
-	if (!e) var e = window.event;
-	if (e.target) targ = e.target;
-	else if (e.srcElement) targ = e.srcElement;
-	while(targ) {
-		if(!targ.classList.contains("hoverable")){
-			targ.classList.add("hovering");
-		} 
-		targ = targ.parentNode;
-	}
-}, false);
+	var hoverables = document.getElementsByClassName('hoverable');
+	for (var i = 0; i < hoverables.length; ++i) {  
+      hoverables[i].addEventListener('touchstart', function(e) {
+		this.classList.add('hovering');
+      },false);
+    }  
+}
 
 </script>
 </body>
