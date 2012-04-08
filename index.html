@@ -50,6 +50,10 @@
 			text-decoration:none;
 		}
 
+		ul{padding-left:15px;}
+		li {margin-bottom: 16px;}
+		.close li{margin-bottom:5px;}
+
 		/* A handful of useful classes */
 		.c {margin: 0 auto;}
 		.db {display:block;}
@@ -110,6 +114,7 @@
 
 		.nobtp{
 			list-style: none;
+			padding-left:5px;
 		}
 
 		.polariod{
@@ -334,7 +339,7 @@
 			.skills {clear:both; }
 		}
 
-		@media screen and (min-width: 1200px){
+		@media only screen and (min-width: 1200px){
 			/* Resize the polariod as you've got a bit more space */
 			.polariod{
 				width:100px; /* 60px*1.7 */
@@ -347,7 +352,7 @@
 			    height: 20px; /* 10px*2 */
 			    left:6px; /* 3px*2 */
 			    border-bottom-left-radius: 10px; /* 5px*2 */
-			    border-bottom-right-radius: 10px; /*5px *2 */
+			    border-bottom-right-radius: 10px; /* 5px*2 */
 			}
 		}
 
@@ -358,7 +363,13 @@
 			.skillh{font-size:10px;}
 			p{margin-top:7px;margin-bottom:7px;}
 			h1{text-shadow:none;}
+			h2{margin-top:-5px;margin-bottom:10px;}
 			h3{margin-top:10px;}
+			ul{margin-top:3px;}
+			li {margin-bottom: 10px;}
+			.close li{margin-bottom:3px;}
+
+			.multi-col > section {padding:10px 5px 5px;}
 
 			/* screen/print only classes */
 			.screenonly{
@@ -423,7 +434,7 @@
 			article {
 				clear:both;
 				display:block;
-				padding-top:20px;
+				padding-top:16px;
 			}
 			article:first-of-type{padding:none;}
 
@@ -432,13 +443,20 @@
 				color:transparent;
 				width:50px;
 				position: absolute;
-				top:10px;
+				top:8px;
 				left:50%;
 				border-top:1px solid black;
 			}
 			article:first-of-type:before{border-top:none;}
 
+			aside footer {
+				text-align: right;
+			}
+
+			/* and there's a bit less space for the polariod */
 			.polariod{
+				width:60px;
+				height:60px;
 				box-shadow:none;
 				border: 1px solid #444;
 			}
@@ -451,7 +469,7 @@
 <body>
 <header>
 	<h1 class="prefixed suffixed" data-prefix="Dr" data-suffix="BEng PhD"> Philip Charles Ingrey </h1>
-	<div class="polariod widescreenonly"><img width="100%" src="http://placekitten.com/100/100"></div>
+	<div class="polariod widescreenonly"><img width="100%" src="http://placekitten.com/g/400/400"></div>
 </header>
 <div class="multi-col">
 	<section>
@@ -459,19 +477,13 @@
 		<div class="bd">
 			<ul>
 			 	<li>
-			 		<p>
-			 			First-class BEng in Mathematics and Electronic Engineering from the University of Nottingham in 2007 (final-year average <a href='http://www.biggleswadetoday.co.uk/news/local-news/student_from_biggleswade_wins_hat_trick_of_awards_1_1121483'>95.3%</a>)
-			 		</p>
+			 		First-class BEng in Mathematics and Electronic Engineering from the University of Nottingham in 2007 (final-year average <a href='http://www.biggleswadetoday.co.uk/news/local-news/student_from_biggleswade_wins_hat_trick_of_awards_1_1121483'>95.3%</a>)
 			 	</li>
 				<li>
-			 		<p>
-			 			PhD in Applied Mathematics from the University of Nottingham - graduating in April 2010, one year early - <a href='http://etheses.nottingham.ac.uk/1392/'>'Optical Limits in Left-Handed Media'</a>
-			 		</p>
+			 		PhD in Applied Mathematics from the University of Nottingham - graduating in April 2010, one year early - <a href='http://etheses.nottingham.ac.uk/1392/'>'Optical Limits in Left-Handed Media'</a>
 				</li>
 				<li>
-			 		<p>
-						Recipient of a research fellowship from the Royal Commission for the Exhibition of 1851 - <a href='http://www.royalcommission1851.org.uk/recent2010.html'>'Automated key generation in texture coding'</a> <a href="files/Outline.pdf" class="screenonly">- Lay Statement [pdf]</a>
-			 		</p>
+			 		Recipient of a research fellowship from the Royal Commission for the Exhibition of 1851 - <a href='http://www.royalcommission1851.org.uk/recent2010.html'>'Automated key generation in texture coding'</a> <a href="files/Outline.pdf" class="screenonly">- Lay Statement [pdf]</a>
 				</li>
 			</ul>
 		</div>
@@ -482,21 +494,21 @@
 			Presented at
 		</h2>
 		<ul>
-			<li><p>
+			<li>
 				British Applied Mathematics Colloquium - April 2009 (One of four winners of the SIAM prize for best postgraduate student talk)
-			</p></li>
-			<li><p>
+			</li>
+			<li>
 				Applied Optics Group (Run by the Electrical Systems &amp; Optics Research Division) - May 2009<br>
-			</p></li>
-			<li><p>
+			</li>
+			<li>
 				PIERS '09 - Moscow, August 2009 (Two talks)
-			</p></li>
-			<li><p>
+			</li>
+			<li>
 				Theoretical Mechanics Seminar series - February 2010
-			</p></li>
-			<li><p>
+			</li>
+			<li>
 				METAL Workshop - January 2012
-			</p></li>
+			</li>
 		</ul>
 	</section>
 
@@ -507,11 +519,13 @@
 			<h3>Mathematics</h3>
 			<article class="skill hoverable">
 				<h4 class="skillh s3">Mathematica</h4>
-				<aside>Mathematica is my current day-to-day programming environment. I have wide ranging experience with Mathematica, including image processing, prototyping code, multi-core deployment, data visualisation and data-mining<footer>Experience: 5+ years</footer></aside>
+				<aside>Mathematica is my current day-to-day programming environment. I have wide ranging experience with Mathematica, including image processing, prototyping code, multi-core deployment, data visualisation and data-mining
+					<footer>Experience: 5+ years</footer></aside>
 			</article>
 			<article class="skill hoverable">
 				<h4 class="skillh s2">Matlab</h4>
-				<aside>Experience with Matlab centers around multi-dimensional-scaling, the problem of determining a collection of object's positions when given only the distances between them<footer>Experience: 2 years</footer></aside>
+				<aside>Experience with Matlab centers around multi-dimensional-scaling, the problem of determining a collection of object's positions when given only the distances between them
+					<footer>Experience: 2 years</footer></aside>
 			</article>
 		</section>
 		
@@ -578,7 +592,7 @@
 			<article class="skill hoverable">
 				<h4 class="skillh s3">HTML</h4>
 				<aside>
-					I stay up to date with the latest developments in HTML5 and, as such, know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv.
+					I stay up to date with the latest developments in HTML5 and, as such, know my &lt;article&gt; from my &lt;aside&gt;. As an example please check the source of the online version of this cv. I am also an active member of the W3C responsive images community group.
 					<footer>Experience: 4 years</footer>
 				</aside>
 			</article>
@@ -618,6 +632,28 @@
 				</aside>
 			</article>
 		</section>
+
+		<section class="skills">
+			<h3>Personal Skills</h3>
+			<article class="skill hoverable">
+				<h4 class="skillh s3">Managment</h4>
+				<aside>
+					As well as managing the finance team at Grace Church Nottingham, I have also lead group varying in size from half a dozen to 30+
+				</aside>
+			</article>
+			<article class="skill hoverable">
+				<h4 class="skillh s3">Working in a team</h4>
+				<aside>
+					I enjoy working as part of a team and am currently part of a software group who are collaborating on a graphical front-end for a finite element solver.
+				</aside>
+			</article>
+			<article class="skill hoverable">
+				<h4 class="skillh s3">Communication</h4>
+				<aside>
+					I have given a variety of presentations to a wide range of audiences, a number of which involved speaking about technical subjects with a non-technical audience.
+				</aside>
+			</article>
+		</section>
 	</section>
 
 	<section>
@@ -629,9 +665,7 @@
 		</h3>
 		<ul>
 			<li>
-				<p>
-					Letter of commendation from the head of department for outstanding achievement during the first year of study
-				</p>
+				Letter of commendation from the head of department for outstanding achievement during the first year of study
 			</li>
 		</ul>
 		<h3>
@@ -639,9 +673,7 @@
 		</h3>
 		<ul>
 			<li>
-				<p>
-		    		Price Waterhouse Coopers Mathematics Prize 1: Best overall performance in the second year by a joint honours undergraduate student.
-		    	</p>
+				Price Waterhouse Coopers Mathematics Prize 1: Best overall performance in the second year by a joint honours undergraduate student.
 			</li>
 		</ul>
 		<h3>
@@ -649,19 +681,13 @@
 		</h3>
 		<ul>
 			<li>
-				<p>
-					Institution of Electrical Engineers Prize: For the most outstanding final year student in the School of Electrical and Electronic Engineering.
-				</p>
+				Institution of Electrical Engineers Prize: For the most outstanding final year student in the School of Electrical and Electronic Engineering.
 			</li>
 			<li>
-				<p>
-					Tryfan Rogers Memorial Prize: For most outstanding graduating student in the School of Mathematical Sciences.
-				</p>
+				Tryfan Rogers Memorial Prize: For most outstanding graduating student in the School of Mathematical Sciences.
 			</li>
 			<li>
-		    	<p>
-		    		Marsden Prize: For a student who has gained high distinction in examinations, and has throughout their University careers been of exemplary conduct and given proofs of outstanding character and personality.
-		    	</p>
+		    	Marsden Prize: For a student who has gained high distinction in examinations, and has throughout their University careers been of exemplary conduct and given proofs of outstanding character and personality.
 			</li>
 		</ul>
 		<h3>
@@ -669,9 +695,7 @@
 		</h3>
 		<ul>
 			<li>
-				<p>
-		    		University Endowed (Andrew Hendry) Postgraduate Prize 2009/2010
-				</p>
+				University Endowed (Andrew Hendry) Postgraduate Prize 2009/2010
 		 	</li>
 		</ul>
 	</section>
@@ -685,38 +709,46 @@
 		<h3>
 			2010
 		</h3>
-		<p>
-			<a href=http://www.opticsinfobase.org/ol/abstract.cfm?uri=ol-34-7-1015>Enhanced twinkling in left-handed media</a>, Optics Letters, Vol. 35, Issue 22, pp. 3802-3804<br>
-		</p>
+		<ul class="nobtp">
+			<li>
+				<a href=http://www.opticsinfobase.org/ol/abstract.cfm?uri=ol-34-7-1015>Enhanced twinkling in left-handed media</a>, Optics Letters, Vol. 35, Issue 22, pp. 3802-3804
+			</li>
+		</ul>
 		<h3>
 			2009
 		</h3>
-		<p>
-			<a href=http://www.opticsinfobase.org/ol/abstract.cfm?uri=ol-34-7-1015>Perfect lens with not so perfect boundaries</a>, Optics Letters, vol. 34, Issue 7, pp. 1015-1017<br>
-		</p>
-		<p>
+		<ul class="nobtp">
+			<li>
+				<a href=http://www.opticsinfobase.org/ol/abstract.cfm?uri=ol-34-7-1015>Perfect lens with not so perfect boundaries</a>, Optics Letters, vol. 34, Issue 7, pp. 1015-1017
+			</li>
+			<li>
 			<a href="http://www.opticsinfobase.org/abstract.cfm?URI=ol-35-22-3802">Negative refraction and rough surfaces: A new regime for lensing</a>, Optics Communications, Volume 283, Issue 6, 15 March 2010, pp. 1188-1191 
-		</p>
+			</li>
+		</ul>
 		<h3>
 			2008<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14></a>
 		</h3>
-		<p>
-			<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14>Direct Computation of Statistical Variations in Electromagnetic Problems</a>, Transactions on Electromagnetic Compatibility, vol. 50, Issue 2, pp. 325-332 (which came second in the IEEE EMC Best Paper Awards)
-		</p>
-		<p>
-			<a href=http://www.sciencedirect.com/science?_ob=ArticleURL&amp;_udi=B6TVF-4V35679-2&amp;_user=5939061&amp;_rdoc=1&amp;_fmt=&amp;_orig=search&amp;_sort=d&amp;view=c&amp;_acct=C000009959&amp;_version=1&amp;_urlVersion=0&amp;_userid=5939061&amp;md5=2651817656d5c4069bfa0e6ae41d8902>Between right- and left-hand media</a>, Optics Communications, vol. 282, Issue 5, pp. 1020-1027
-		</p>
+		<ul class="nobtp">
+			<li>
+				<a href=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4527042&amp;arnumber=4505430&amp;count=38&amp;index=14>Direct Computation of Statistical Variations in Electromagnetic Problems</a>, Transactions on Electromagnetic Compatibility, vol. 50, Issue 2, pp. 325-332 (which came second in the IEEE EMC Best Paper Awards)
+			</li>
+			<li>
+				<a href=http://www.sciencedirect.com/science?_ob=ArticleURL&amp;_udi=B6TVF-4V35679-2&amp;_user=5939061&amp;_rdoc=1&amp;_fmt=&amp;_orig=search&amp;_sort=d&amp;view=c&amp;_acct=C000009959&amp;_version=1&amp;_urlVersion=0&amp;_userid=5939061&amp;md5=2651817656d5c4069bfa0e6ae41d8902>Between right- and left-hand media</a>, Optics Communications, vol. 282, Issue 5, pp. 1020-1027
+			</li>
+		</ul>
 		<h3>
 			2007
 		</h3>
-		<p>
-			<a href=http://link.aps.org/abstract/PRE/v76/e031134>Power-law-distributed level crossings define fractal behavior</a>, Physical Review E, vol. 76, Issue 3, id. 031134&nbsp;
-		</p>
+		<ul class="nobtp">
+			<li>
+				<a href=http://link.aps.org/abstract/PRE/v76/e031134>Power-law-distributed level crossings define fractal behavior</a>, Physical Review E, vol. 76, Issue 3, id. 031134&nbsp;
+			</li>
+		</ul>
 	</section>
 
 	<section>
 		<h2>Outside of Work</h2>
-		<ul>
+		<ul class="close">
 			<li>Trustee and Finance Manager of <a href="http://gracechurchnottingham.org">Grace Church Nottingham</a></li>
 			<li>A keen DIYer</li>
 			<li>And amateur <a href="http://www.flickr.com/photos/76694815@N02/">photographer</a></li>
@@ -725,7 +757,7 @@
 
 	<section>
 		<h2>Contact</h2>
-		<ul class='nobtp'>
+		<ul class='nobtp close'>
 			<li>
 				<img class='btp' src='./images/twitter.png' width='20px'>
 				<a href='http://twitter.com/philingrey'>@philingrey</a>
