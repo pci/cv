@@ -1,6 +1,6 @@
 # Philip Ingrey - CV
 
-An online version of this CV can be found at <www.philingrey.com/cv/cv.pdf>.
+An online version of this CV can be found at <www.ingrey.dev/cv/cv.pdf>.
 
 
 ## Employment History
